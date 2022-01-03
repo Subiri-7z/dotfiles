@@ -14,6 +14,9 @@ Plug 'alvan/vim-closetag'
 Plug 'ryanoasis/vim-devicons'
 Plug 'honza/vim-snippets'
 Plug 'taohexxx/lightline-buffer'
+Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
+Plug 'puremourning/vimspector'
+Plug 'tpope/vim-repeat'
 call plug#end()
 
 "---- Remappings ----
@@ -43,7 +46,7 @@ vnoremap J :m '>+1<CR>gv=gv
 "Disable highlight after search
 nnoremap <esc> :noh<CR><esc>
 
-"Cycle through buffers
+"Cycle through buffers and close
 nnoremap<C-n> :bnext<CR>
 nnoremap<C-p> :bprevious<CR>
 nnoremap<C-x> :bd<CR>
@@ -72,6 +75,7 @@ set updatetime=300      "Refresh quicker"
 set showtabline=2       "Always show tabs in top line"
 set mouse=a             "Mouse functionality"
 set hidden              "Change buffer without saving"
+set autochdir           "Change automatically directory to current file"
 
 "-------- FUNCTIONS ---------
 
@@ -99,4 +103,5 @@ source $HOME/.config/nvim/plug-lightline.vim
 source $HOME/.config/nvim/plug-fzf.vim
 source $HOME/.config/nvim/plug-closetag.vim
 source $HOME/.config/nvim/plug-tokyocolorscheme.vim
+source $HOME/.config/nvim/plug-vimspector.vim
 
