@@ -17,6 +17,7 @@ Plug 'taohexxx/lightline-buffer'
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 Plug 'puremourning/vimspector'
 Plug 'tpope/vim-repeat'
+Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'npm ci' }
 call plug#end()
 
 "---- Remappings ----
@@ -42,6 +43,9 @@ nnoremap K :m .-2<CR>==
 nnoremap J :m .+1<CR>==
 vnoremap K :m '<-2<CR>gv=gv
 vnoremap J :m '>+1<CR>gv=gv
+
+"Join line below without space
+nmap <C-J> gJdiW
 
 "Disable highlight after search
 nnoremap <esc> :noh<CR><esc>
