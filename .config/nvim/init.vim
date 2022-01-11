@@ -69,14 +69,15 @@ call plug#end()
 let mapleader="\<SPACE>"
 
 "---- Moving to other tabs
-map <leader>h :wincmd h<CR>
-map <leader>j :wincmd j<CR>
+nmap <leader>h :wincmd h<CR>
+nmap <leader>j :wincmd j<CR>
 
-map <leader>k :wincmd k<CR>
-map <leader>l :wincmd l<CR>
+nmap <leader>k :wincmd k<CR>
+nmap <leader>l :wincmd l<CR>
 
 "--- Show NerdTree at current file's dir
 nnoremap <Leader>pt :NERDTreeFind<Enter>
+nnoremap <Leader>po :NERDTree<Enter>
 
 "Enter line in normal mode above and below"
 nmap <Enter> o<esc>
@@ -102,6 +103,7 @@ nnoremap<C-x> :bd!<CR>
 "Terminal mode exit ESC
 tnoremap <Esc> <C-\><C-n>
 map <F6> :let $VIM_DIR=expand('%:p:h')<CR><C-w>S <leader>j :terminal<CR>:resize 10<CR>i cd $VIM_DIR<CR><C-l>
+
 
 
 "---- NVIM plugins configs ----
